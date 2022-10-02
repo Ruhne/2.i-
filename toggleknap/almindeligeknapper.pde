@@ -1,6 +1,4 @@
-// Dette er kode der viser en almindelig-knap
-// Men koden er IKKE direkte EGNET TIL ET BIBLIOTEK !!!
-
+class Knap{
 //DEL AF KNAP
 int      knapX=10, knapY=30, knapB=120, knapH = 40;
 boolean  knapOn = false;
@@ -8,13 +6,13 @@ boolean  knapOn = false;
 //IKKE DEL AF KNAP
 int      counter = 0;
 
-void setup(){
-  size(500,500);
+Knap(int x, int y){
+knapX = x;
+knapY = y;
 }
 
 
-void draw(){
-  clear();
+void tegn(){
   
   //DEL AF KNAPPEN - tegning af knap
   textSize(30);
@@ -30,25 +28,20 @@ void draw(){
     text("tryk !",knapX+10,knapY+30);
   }
   
-  //IKKE DEL AF KNAP - udskrivning af counter!
-  fill(255);
-  text("knap er tændt " + counter + " gange",10,300);
 }
 
-void mousePressed(){
+void knapKlik(){
   //DEL AF KNAP - registrer klik
   if(mousePressed && mouseX>knapX && mouseX<(knapX+knapB) && mouseY>knapY && mouseY<(knapY+knapH)){
     knapOn = true;
   }  
   
-  //IKKE DEL AF KNAP - optælning af counter!
-  if(knapOn){
-    counter++;  
-  }
   
 }
 
-void mouseReleased(){
+void knapReleased(){
   //EN DEL AF KNAP - sluk knappen når der gives slip
   knapOn = false;
+}
+
 }

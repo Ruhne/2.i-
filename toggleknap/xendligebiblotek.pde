@@ -1,4 +1,4 @@
-
+/*
 
 ToggleKnap  minToggleKnap   = new ToggleKnap(10,30,120,40);
 int         counter         = 0;
@@ -28,3 +28,4 @@ void mousePressed(){
 void mouseReleased(){
 
 }
+*/
