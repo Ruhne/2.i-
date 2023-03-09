@@ -42,6 +42,7 @@ void knapKlik(){
 void knapReleased(){
   //EN DEL AF KNAP - sluk knappen når der gives slip
   knapOn = false;
+
 }
 
 }
